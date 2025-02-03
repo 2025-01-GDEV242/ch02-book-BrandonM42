@@ -50,7 +50,12 @@ class Book
     
     public void setRefNumber(String ref)
     {
-        refNumber = ref;
+        if(ref.length() >=3)
+        {
+           refNumber = ref; 
+        }
+        else
+        System.out.println("Error give a number greater than or equal to 3");
     }
     
     public void printDetails()
