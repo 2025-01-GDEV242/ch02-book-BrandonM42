@@ -55,7 +55,12 @@ class Book
     
     public void printDetails()
     {
-        System.out.println("Book author: "+getAuthor()+" Book title: "+getTitle()+" Book pages: "+getPages()+"");
+        if(getRefNumber().length() > 0)
+        {
+            System.out.println("Book author: "+getAuthor()+" Book title: "+getTitle()+" Book pages: "+getPages()+" Reference Num: "+getRefNumber()+"");
+        }
+        else 
+        System.out.println("Book author: "+getAuthor()+" Book title: "+getTitle()+" Book pages: "+getPages()+" Reference Num: ZZZ"+"");
     }
     
     
