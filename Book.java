@@ -14,17 +14,19 @@ class Book
     private int pages;
     private String refNumber;
     private int borrowed;
+    private boolean courseText;
 
     /**
      * Set the author and title fields when this object
      * is constructed.
      */
-    public Book(String bookAuthor, String bookTitle, int bookPages)
+    public Book(String bookAuthor, String bookTitle, int bookPages, boolean bookCourseText)
     {
         author = bookAuthor;
         title = bookTitle;
         pages = bookPages;
         refNumber = "";
+        courseText = bookCourseText;
     }
 
     // Add the methods here ...
@@ -62,6 +64,11 @@ class Book
         }
         else
         System.out.println("Error give a number greater than or equal to 3");
+    }
+    
+    public boolean isCourseText()
+    {
+        return courseText;
     }
     
     public void borrow()
