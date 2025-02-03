@@ -31,6 +31,7 @@ class Book
 
     // Add the methods here ...
     
+    //getters for the private variables
     public String getAuthor()
     {
         return author;
@@ -56,6 +57,8 @@ class Book
         return borrowed;
     }
     
+    
+    //sets the reference number if its length is greater than 3
     public void setRefNumber(String ref)
     {
         if(ref.length() >=3)
@@ -66,16 +69,19 @@ class Book
         System.out.println("Error give a number greater than or equal to 3");
     }
     
+    //checks if the book is in a course
     public boolean isCourseText()
     {
         return courseText;
     }
     
+    //adds one to borrowed when called
     public void borrow()
     {
         borrowed +=1;
     }
     
+    //prints out most of the details to the book class
     public void printDetails()
     {
         if(getRefNumber().length() > 0)
